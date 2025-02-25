@@ -69,7 +69,7 @@ const main = async () => {
           name: "McCrispy Chicken Elite",
           description:
             "Composto por pão tipo brioche com batata, molho Honey&Fire, bacon em fatias, alface, tomate, queijo sabor cheddar e carne 100% de peito de frango, temperada e empanada, acompanhamento e bebida.",
-          price: 39.9,
+          price: 4.350,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQr12aTqPo3SsGjBJCaM7yhxnbDlXeL5N9dckv",
           menuCategoryId: combosCategory.id,
@@ -89,7 +89,7 @@ const main = async () => {
           name: "Duplo Cheddar McMelt",
           description:
             "Dois hambúrgueres (100% carne bovina), molho lácteo com queijo tipo cheddar, cebola ao molho shoyu e pão escuro com gergelim, acompanhamento e bebida.",
-          price: 36.2,
+          price: 3.200,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQWdq0w8niS9XCLQu7Nb4jvBYZze16goaOqsKR",
           menuCategoryId: combosCategory.id,

@@ -127,7 +127,7 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                     <FormControl>
                       <PatternFormat
                         placeholder="Digite seu NIF..."
-                        format="###.###.###-##"
+                        format="#########@@###"
                         customInput={Input}
                         {...field}
                       />
