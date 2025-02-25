@@ -4,7 +4,7 @@ export const removeNifPunctuation = (nif: string): string => {
 };
 
 // Função para validar o NIF de Angola
-export const isValidNifAngola = (nif: string): boolean => {
+export const isValidNif = (nif: string): boolean => {
   // Remove espaços em branco no início e no fim
   nif = nif.trim();
 

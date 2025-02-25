@@ -5,13 +5,14 @@ import { db } from "@/lib/prisma";
 import RestaurantCategories from "./components/categories";
 import RestaurantHeader from "./components/header";
 
+//Rota de parametro dinâmico 2
 interface RestaurantMenuPageProps {
   params: Promise<{ slug: string }>;
   searchParams: Promise<{ consumptionMethod: string }>;
 }
 
 const isConsumptionMethodValid = (consumptionMethod: string) => {
-  return ["DINE_IN", "TAKEAWAY"].includes(consumptionMethod.toUpperCase());
+  return ["dine_in", "takeaway"].includes(consumptionMethod.toLowerCase());
 };
 
 const RestaurantMenuPage = async ({
@@ -44,4 +45,4 @@ const RestaurantMenuPage = async ({
 
 export default RestaurantMenuPage;
 
-// http://localhost:3000/fsw-donalds/menu?consumptionMethod=dine_in
+// http://localhost:3000/fs-restaurante/menu?consumptionMethod=dine_in

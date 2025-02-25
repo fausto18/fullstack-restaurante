@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { db } from "@/lib/prisma";
 
 import ConsumptionMethodOption from "./components/consumption-method-option";
-
+// Rota de parametro dinâmico
 interface RestaurantPageProps {
   params: Promise<{ slug: string }>;
 }

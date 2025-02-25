@@ -9,8 +9,8 @@ const main = async () => {
     await tx.restaurant.deleteMany();
     const restaurant = await tx.restaurant.create({
       data: {
-        name: "FSW Donalds",
-        slug: "fsw-donalds",
+        name: "FS Restaurante", 
+        slug: "fs-restaurante",
         description: "O melhor fast food do mundo",
         avatarImageUrl:
           "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQvcNP9rHlEJu1vCY5kLqzjf29HKaeN78Z6pRy",
@@ -30,7 +30,7 @@ const main = async () => {
           name: "McOferta Média Big Mac Duplo",
           description:
             "Quatro hambúrgueres (100% carne bovina), alface americana, queijo fatiado sabor cheddar, molho especial, cebola, picles e pão com gergilim, acompanhamento e bebida.",
-          price: 39.9,
+          price: 6.500,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQaHB8tslkBUjlHSKiuseLm2hIFzVY0OtxEPnw",
           menuCategoryId: combosCategory.id,
@@ -49,7 +49,7 @@ const main = async () => {
           name: "Novo Brabo Melt Onion Rings",
           description:
             "Dois hambúrgueres de carne 100% bovina, méquinese, a exclusiva maionese especial com sabor de carne defumada, onion rings, fatias de bacon, queijo processado sabor cheddar, o delicioso molho lácteo com queijo tipo cheddar tudo isso no pão tipo brioche trazendo uma explosão de sabores pros seus dias de glória! Acompanhamento e Bebida.",
-          price: 41.5,
+          price: 3.500,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQeGQofnEPyQaHEV2WL8rGUs41oMICtYfNkphl",
           menuCategoryId: combosCategory.id,
@@ -124,7 +124,7 @@ const main = async () => {
             "Cebola",
             "Picles",
           ],
-          price: 39.9,
+          price: 7.100,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQKfI6fivqActTvBGLXfQe4a8CJ6d3HiR7USPK",
           menuCategoryId: hamburguersCategory.id,
@@ -144,7 +144,7 @@ const main = async () => {
             "Queijo processado sabor cheddar",
             "Molho lácteo com queijo tipo cheddar",
           ],
-          price: 41.5,
+          price: 4.500,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQ99rtECuYaDgmA4VujBU0wKn2ThXJvF3LHfyc",
           menuCategoryId: hamburguersCategory.id,
@@ -164,7 +164,7 @@ const main = async () => {
             "Queijo sabor cheddar",
             "Carne 100% de peito de frango",
           ],
-          price: 39.9,
+          price: 2.700,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQUY0VlDTmvPeJLoyOjzNsMqFdxUI423nBl6br",
           menuCategoryId: hamburguersCategory.id,
@@ -180,7 +180,7 @@ const main = async () => {
             "Molho lácteo com queijo tipo cheddar",
             "Cebola ao molho shoyu",
           ],
-          price: 36.2,
+          price: 5.200,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQBBmifbjzEVXRoycAtrP9vH45bZ6WDl3QF0a1",
           menuCategoryId: hamburguersCategory.id,
@@ -200,7 +200,7 @@ const main = async () => {
           name: "Fritas Grande",
           description: "Batatas fritas crocantes e sequinhas. Vem bastante!",
           ingredients: [],
-          price: 10.9,
+          price: 3.000,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQNd3jSNrcJroaszwjUAlM6iSO5ZTx2HV70t31",
           menuCategoryId: frenchFriesCategory.id,
@@ -211,7 +211,7 @@ const main = async () => {
           description:
             "Batatas fritas crocantes e sequinhas. Vem uma média quantidade!",
           ingredients: [],
-          price: 9.9,
+          price: 2.500,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQ7Y6lv9tkc0L9oMIXZsFJtwnBh2KCz3y6uSW1",
           menuCategoryId: frenchFriesCategory.id,
@@ -222,7 +222,7 @@ const main = async () => {
           description:
             "Batatas fritas crocantes e sequinhas. Vem pouquinho (é bom pra sua dieta)!",
           ingredients: [],
-          price: 5.9,
+          price: 1.500,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQ5toOZxYa1oARJCUGh4EY3x8NjXHtvZ7lnVfw",
           menuCategoryId: frenchFriesCategory.id,
@@ -252,7 +252,7 @@ const main = async () => {
           name: "Fanta Laranja",
           description: "Fanta Laranja gelada para acompanhar seu lanche.",
           ingredients: [],
-          price: 5.9,
+          price: 1.000,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQW7Kxm9gniS9XCLQu7Nb4jvBYZze16goaOqsK",
           menuCategoryId: drinksCategory.id,
@@ -262,7 +262,7 @@ const main = async () => {
           name: "Água Mineral",
           description: "A bebida favorita do Cristiano Ronaldo.",
           ingredients: [],
-          price: 2.9,
+          price: 700,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQ7i05S5tkc0L9oMIXZsFJtwnBh2KCz3y6uSW1",
           menuCategoryId: drinksCategory.id,
@@ -282,7 +282,7 @@ const main = async () => {
           name: "Casquinha de Baunilha",
           description: "Casquinha de sorvete sabor baunilha.",
           ingredients: [],
-          price: 3.9,
+          price: 1.500,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQtfuQrAKkI75oJfPT0crZxvX82ui9qV3hLFdY",
           menuCategoryId: desertsCategory.id,
@@ -292,7 +292,7 @@ const main = async () => {
           name: "Casquinha de Chocolate",
           description: "Casquinha de sorvete sabor chocolate.",
           ingredients: [],
-          price: 3.9,
+          price: 2.000,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQBH21ijzEVXRoycAtrP9vH45bZ6WDl3QF0a1M",
           menuCategoryId: desertsCategory.id,
@@ -302,7 +302,7 @@ const main = async () => {
           name: "Casquinha de Mista",
           description: "Casquinha de sorvete sabor baunilha e chocolate.",
           ingredients: [],
-          price: 2.9,
+          price: 2.800,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQ4rBrtULypXmR6JiWuhzS8ALjVkrF3yfatC7E",
           menuCategoryId: desertsCategory.id,
