@@ -5,35 +5,52 @@ export const removeNifPunctuation = (nif: string): string => {
 
 // Função para validar o NIF de Angola
 export const isValidNif = (nif: string): boolean => {
-  // Remove espaços em branco no início e no fim
-  nif = nif.trim();
+  // Remove espaços e pontuação
+  nif = removeNifPunctuation(nif.trim());
 
-  // Verifica se o NIF tem exatamente 14 caracteres
+  // Verifica se o NIF tem exatamente 14 caracteres após remoção de pontuação
   if (nif.length !== 14) {
     return false;
   }
+
   // Verifica se os primeiros 9 caracteres são dígitos
   const firstNineDigits = nif.substring(0, 9);
   if (!/^\d{9}$/.test(firstNineDigits)) {
     return false;
   }
 
-  // Verifica se os próximos 3 caracteres são letras correspondentes às províncias
-  const provinceCode = nif.substring(10, 12).toUpperCase();
+  // Verifica se os próximos 2 caracteres são letras correspondentes às províncias
+  const provinceCode = nif.substring(9, 11).toUpperCase();
   const validProvinceCodes = [
-    "BA", "BG", "CC", "CN", "CS", "HO", "HL", "LA", "LN", "LS", "ML", "MO", "NB",
-    "UG", "ZA"
+    "BA", // Benguela
+    "BG", // Bengo
+    "BI", // Bié
+    "CC", // Cabinda
+    "CS", // Cuando Cubango
+    "CN", // Cuanza Norte
+    "KS", // Cuanza Sul
+    "CU", // Cunene
+    "HO", // Huambo
+    "HL", // Huíla
+    "LA", // Luanda
+    "LN", // Lunda Norte
+    "LS", // Lunda Sul
+    "ML", // Malanje
+    "MO", // Moxico
+    "NB", // Namibe
+    "UG", // Uíge
+    "ZA", // Zaire
   ];
   if (!validProvinceCodes.includes(provinceCode)) {
     return false;
   }
 
   // Verifica se os últimos 3 caracteres são dígitos
-  const lastTwoDigits = nif.substring(12);
-  if (!/^\d{3}$/.test(lastTwoDigits)) {
+  const lastThreeDigits = nif.substring(11);
+  if (!/^\d{3}$/.test(lastThreeDigits)) {
     return false;
   }
 
-  // Se todas as verificações passaram, o NIF é considerado válido
+  // Se todas as verificações passaram, o NIF é válido
   return true;
 };
