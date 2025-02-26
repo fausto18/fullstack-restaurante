@@ -26,7 +26,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-import { isValidNifAngola, removeNifPunctuation } from "../../menu/helpers/nif";
+import { isValidNif, removeNifPunctuation } from "../../menu/helpers/nif";
 
 const formSchema = z.object({
   nif: z
@@ -35,7 +35,7 @@ const formSchema = z.object({
     .min(1, {
       message: "O NIF é obrigatório.",
     })
-    .refine((value) => isValidNifAngola(value), {
+    .refine((value) => isValidNif(value), {
       message: "NIF inválido.",
     }),
 });
@@ -75,7 +75,7 @@ const NifForm = () => {
                   <FormControl>
                     <PatternFormat
                       placeholder="Digite seu NIF..."
-                      format="###.###.###-##"
+                      format="#########@@###"
                       customInput={Input}
                       {...field}
                     />
