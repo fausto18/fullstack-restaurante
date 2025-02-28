@@ -242,7 +242,7 @@ const main = async () => {
           name: "Coca-cola",
           description: "Coca-cola gelada para acompanhar seu lanche.",
           ingredients: [],
-          price: 5.9,
+          price: 800,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQJS1b33q29eEsh0CVmOywrqx1UPnJpRGcHN5v",
           menuCategoryId: drinksCategory.id,

@@ -7,7 +7,6 @@ import { useParams, useSearchParams } from "next/navigation";
 import { useContext, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { PatternFormat } from "react-number-format";
-import { toast } from "sonner";
 import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
@@ -34,6 +33,7 @@ import { Input } from "@/components/ui/input";
 import { createOrder } from "../actions/create-order";
 import { CartContext } from "../contexts/cart";
 import { isValidNif } from "../helpers/nif";
+import { loadStripe } from "@stripe/stripe-js";
 
 const formSchema = z.object({
   name: z.string().trim().min(1, {
@@ -83,10 +83,11 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
           products,
           slug,
         });
-        onOpenChange(false);
-        toast.success("Pedido finalizado com sucesso!");
-      })
-
+        const { sessionId } = await createStripeCheckout({ products });
+        if (!process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY) return;
+        const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
+        stripe?.redirectToCheckout({ sessionId });
+      });
 
     } catch (error) {
       console.error(error);
