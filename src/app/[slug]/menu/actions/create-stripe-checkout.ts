@@ -34,7 +34,7 @@ export const createStripeCheckout = async ({
     },
     line_items: products.map((product) => ({
       price_data: {
-        currency: "brl",
+        currency: "aoa",
         product_data: {
           name: product.name,
           images: [product.imageUrl],
